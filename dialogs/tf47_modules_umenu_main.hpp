@@ -2,7 +2,7 @@ class tf47_modules_umenu_main_dialog
 {
 	idd = -1;
 	movingEnable = false;
-	onLoad = "uiNamespace setVariable ['tf47_modules_umenu_main_dialog_var',_this select 0]; [] call tf47_modules_umenu_fnc_initMain;";
+	onLoad = "uiNamespace setVariable ['tf47_modules_umenu_main_dialog_var',_this select 0]; [] spawn tf47_modules_umenu_fnc_initMain;";
 	onUnLoad = "uiNamespace setVariable ['tf47_modules_umenu_main_dialog_var',nil]";
 	class ControlsBackground
 	{
@@ -76,7 +76,7 @@ class tf47_modules_umenu_main_dialog
 			y = 0.401 * safezoneH + safezoneY;
 			w = 0.103125 * safezoneW;
 			h = 0.044 * safezoneH;
-			action = "closeDialog 0;";
+			action = "closeDialog 0; createDialog 'tf47_modules_umenu_ft_dialog';";
 		};
 		class tf47_modules_umenu_main_vd_button: tf47_modules_sp_base_rscbutton_main
 		{
@@ -86,7 +86,7 @@ class tf47_modules_umenu_main_dialog
 			y = 0.456 * safezoneH + safezoneY;
 			w = 0.103125 * safezoneW;
 			h = 0.044 * safezoneH;
-			action = "closeDialog 0;";
+			action = "closeDialog 0; createDialog 'tf47_modules_umenu_vd_dialog';";
 		};
 		class tf47_modules_umenu_main_groupname_button: tf47_modules_sp_base_rscbutton_main
 		{
@@ -96,7 +96,7 @@ class tf47_modules_umenu_main_dialog
 			y = 0.511 * safezoneH + safezoneY;
 			w = 0.103125 * safezoneW;
 			h = 0.044 * safezoneH;
-			action = "closeDialog 0;";
+			action = "closeDialog 0; createDialog 'tf47_modules_umenu_gnc_dialog'";
 		};
 		class tf47_modules_umenu_main_close_button: tf47_modules_sp_base_rscbutton_main
 		{

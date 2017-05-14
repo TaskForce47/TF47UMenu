@@ -2,7 +2,7 @@ class tf47_modules_umenu_gnc_dialog
 {
 	idd = -1;
 	movingEnable = false;
-	onLoad = "uiNamespace setVariable ['tf47_modules_umenu_gnc_dialog_var',_this select 0];";
+	onLoad = "uiNamespace setVariable ['tf47_modules_umenu_gnc_dialog_var',_this select 0]; [] spawn tf47_modules_umenu_fnc_initGnc;";
 	onUnLoad = "uiNamespace setVariable ['tf47_modules_umenu_gnc_dialog_var',nil]";
 	class ControlsBackground
 	{
@@ -87,7 +87,7 @@ class tf47_modules_umenu_gnc_dialog
 			y = 0.5685 * safezoneH + safezoneY;
 			w = 0.04125 * safezoneW;
 			h = 0.022 * safezoneH;
-			action = "closeDialog 0; createDialog 'tf47_umenu_main_dialog';";
+			action = "closeDialog 0; createDialog 'tf47_modules_umenu_main_dialog';";
 		};
 		class tf47_modules_umenu_gnc_apply_button: tf47_modules_sp_base_rscbutton_main
 		{
