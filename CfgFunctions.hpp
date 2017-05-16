@@ -6,9 +6,12 @@ class tf47_modules_umenu
         class initMain {};
         class initGnc {};
         class initVd {};
+        class initFt {};
+        class initConfig {};
         class onValueChange {};
         class initPlayer {};
         class updateViewDistance {};
         class saveViewDistance {};
+        class endsWith {};
     };
 };
