@@ -13,11 +13,15 @@ _markerColor = _data select 1;
 
 if(_callsign == "" || _leaderName == "" || _markerType == "") exitWith {};
 
+if(_markerColor == "") then {
+    _markerColor = "ColorBLUFOR";
+};
+
 _freq = ctrlText 1402;
 
 _savedTeams = missionNamespace getVariable ["tf47_modules_umenu_savedTeam", []];
 
-_savedTeams pushBack [_callsign, _markerType, _leaderName, _freq];
+_savedTeams pushBack [_callsign, _markerType, _leaderName, _freq, _markerColor];
 
 missionNamespace setVariable ["tf47_modules_umenu_savedTeam", _savedTeams, true];
 
@@ -45,7 +49,7 @@ _baseMarkerpos = getMarkerPos "tf47_modules_umenu_ft_marker_start";
 _marker = createMarker [_markerName, [_baseMarkerpos select 0,
     (_baseMarkerpos select 1) - _yOffset]];
 
-_marker setMarkerType "ICON";
+_marker setMarkerShape "ICON";
 _marker setMarkerType _markerType;
 _marker setMarkerColor _markerColor;
 
@@ -54,4 +58,4 @@ if(_freq == "") then {
 } else {
     _marker setMarkerText format["%1 | %2 | Channel: %3", _callsign,
         _leaderName, _freq];
-}
+};

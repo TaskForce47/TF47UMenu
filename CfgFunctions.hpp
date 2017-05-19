@@ -13,5 +13,7 @@ class tf47_modules_umenu
         class updateViewDistance {};
         class saveViewDistance {};
         class endsWith {};
+        class createTeam {};
+        class deleteTeam {};
     };
 };

@@ -146,7 +146,7 @@ class tf47_modules_umenu_ft_dialog
 			y = 0.63 * safezoneH + safezoneY;
 			w = 0.04125 * safezoneW;
 			h = 0.022 * safezoneH;
-			action = "[] call tf47_core_umenu_ft_fnc_deleteTeam;";
+			action = "[] call tf47_modules_umenu_fnc_deleteTeam;";
 		};
 		class tf47_modules_umenu_ft_create_button: tf47_modules_sp_base_rscbutton_main
 		{
@@ -156,7 +156,7 @@ class tf47_modules_umenu_ft_dialog
 			y = 0.63 * safezoneH + safezoneY;
 			w = 0.04125 * safezoneW;
 			h = 0.022 * safezoneH;
-			action = "[] call tf47_core_umenu_ft_fnc_createTeam;";
+			action = "[] call tf47_modules_umenu_fnc_createTeam;";
 		};
 		class tf47_modules_umenu_ft_callsign_combo: tf47_modules_umenu_base_combo
 		{

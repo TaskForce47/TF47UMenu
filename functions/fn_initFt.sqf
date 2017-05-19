@@ -7,6 +7,9 @@ _savedTeams = missionNamespace getVariable ["tf47_modules_umenu_savedTeam", []];
     lbSetPicture [1801, _index, format["\a3\ui_f\data\map\Markers\NATO\%1.paa",
         _x select 1]];
     lbSetPictureColor [1801, _index, [1,1,1,1]];
+
+    _leaderName = _x select 2;
+    _freq = _x select 3;
     _tooltip = "";
     if(_freq == "") then {
         _tooltip = format["Leader: %1", _leaderName];
@@ -14,7 +17,7 @@ _savedTeams = missionNamespace getVariable ["tf47_modules_umenu_savedTeam", []];
         _tooltip = format["Leader: %1 | Channel: %2", _leaderName, _freq];
     };
     lbSetTooltip [1801, _index, _tooltip];
-    
+
 } forEach _savedTeams;
 
 _slotName = format ["%1", player];
@@ -23,7 +26,7 @@ _callsigns = [];
 {
     if ([_x select 0, _slotName] call tf47_modules_umenu_fnc_endsWith) then {
         _index = lbAdd [2100, _x select 3];
-        lbSetData [2100, _index, format["%1#%2", _x select 1, _x select 2];
+        lbSetData [2100, _index, format["%1#%2", _x select 1, _x select 2]];
         lbSetPicture [2100, _index,
             format ["\a3\ui_f\data\map\Markers\NATO\%1.paa", _x select 1]];
         lbSetPictureColor [2100, _index, [1,1,1,1]];
