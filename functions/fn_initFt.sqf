@@ -1,7 +1,14 @@
+/**
+ *  @author Willard
+ *  @description
+ *  Inits the FT dialog
+ *  @params none
+ *  @return nothing
+ */
 waitUntil {(ctrlText 1001) != ""};
 
+// populate the listbox with the teams
 _savedTeams = missionNamespace getVariable ["tf47_modules_umenu_savedTeam", []];
-
 {
     _index = lbAdd [1801, _x select 0];
     lbSetPicture [1801, _index, format["\a3\ui_f\data\map\Markers\NATO\%1.paa",
@@ -20,9 +27,9 @@ _savedTeams = missionNamespace getVariable ["tf47_modules_umenu_savedTeam", []];
 
 } forEach _savedTeams;
 
+// populate the listboxes with available markers and c/s
 _slotName = format ["%1", player];
 _callsigns = [];
-
 {
     if ([_x select 0, _slotName] call tf47_modules_umenu_fnc_endsWith) then {
         _index = lbAdd [2100, _x select 3];
@@ -38,6 +45,7 @@ _callsigns = [];
     };
 } forEach tf47_modules_umenu_config;
 
+// chow custom or predefined c/s
 lbSetCurSel [2100, 0];
 if (count _callsigns == 0) then {
     ctrlShow [1400, true];

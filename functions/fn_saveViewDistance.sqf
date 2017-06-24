@@ -1,3 +1,10 @@
+/**
+ *  @author Willard
+ *  @description
+ *  Saves the current view distance setting
+ *  @params none
+ *  @return nothing
+ */
 profileNamespace setVariable ["tf47_modules_umenu_vd_savedFoot",
     tf47_modules_umenu_vd_vdfoot];
 profileNamespace setVariable ["tf47_modules_umenu_vd_savedCar",
