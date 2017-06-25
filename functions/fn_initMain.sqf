@@ -16,3 +16,20 @@ if (leader (group player) != player) then {
         displayCtrl 1602) ctrlSetTooltip
         "Only the group leader can change the group name!";
 };
+
+// show tickets
+if(!isNil "tf47_core_ticketsystem_tickets") then {
+    ctrlSetText [1003, str tf47_core_ticketsystem_tickets];
+} else {
+    ctrlShow [1001, false];
+    ctrlShow [1003, false];
+};
+
+// show slot cost
+_ticketCost = player getVariable ["tf47_core_ticketsystem_cost", -1];
+if(_ticketCost != -1) then {
+    ctrlSetText [1005, str _ticketCost];
+} else {
+    ctrlShow [1004, false];
+    ctrlShow [1005, false];
+};

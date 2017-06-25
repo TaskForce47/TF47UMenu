@@ -25,7 +25,8 @@ tf47_modules_umenu_vd_vdterrain = profileNamespace getVariable
 
 // track vehicle change
 player addEventHandler ["GetInMan", {
-    if((_this select 2) isKindOf "LandVehicle" || (_this select 2) isKindOf "Ship") then {
+    if((_this select 2) isKindOf "LandVehicle" || 
+        (_this select 2) isKindOf "Ship") then {
         setViewDistance tf47_modules_umenu_vd_vdcar;
     } else {
         setViewDistance tf47_modules_umenu_vd_vdair;
