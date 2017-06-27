@@ -28,7 +28,7 @@ if(!isNil "tf47_core_ticketsystem_tickets") then {
 // show slot cost
 _ticketCost = player getVariable ["tf47_core_ticketsystem_cost", -1];
 if(_ticketCost != -1) then {
-    ctrlSetText [1005, str _ticketCost];
+    ctrlSetText [1005, format["  %1", _ticketCost]];
 } else {
     ctrlShow [1004, false];
     ctrlShow [1005, false];
