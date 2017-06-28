@@ -19,7 +19,7 @@ if (leader (group player) != player) then {
 
 // show tickets
 if(!isNil "tf47_core_ticketsystem_tickets") then {
-    ctrlSetText [1003, str tf47_core_ticketsystem_tickets];
+    ctrlSetText [1003, format["  %1", tf47_core_ticketsystem_tickets]];
 } else {
     ctrlShow [1001, false];
     ctrlShow [1003, false];
