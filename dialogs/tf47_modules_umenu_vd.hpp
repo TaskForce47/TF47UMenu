@@ -197,7 +197,7 @@ class tf47_modules_umenu_vd_dialog
 			y = 0.601 * safezoneH + safezoneY;
 			w = 0.08 * safezoneW;
 			h = 0.022 * safezoneH;
-			action = "[] call tf47_modules_umenu_fnc_saveViewDistance;"
+			action = "[] call tf47_modules_umenu_fnc_saveViewDistance;";
 		};
 	};
 };
