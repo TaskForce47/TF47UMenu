@@ -6,6 +6,7 @@
  *  @return nothing
  */
 // Add the key event handler
+waitUntil { !isNull (findDisplay 46) };
 (findDisplay 46) displayAddEventHandler 
     ["KeyDown", "if((_this select 3) && (_this select 1) == 22 && 
         !dialog) then { createDialog 'tf47_modules_umenu_main_dialog';
