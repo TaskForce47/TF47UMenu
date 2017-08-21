@@ -26,7 +26,10 @@ if(!isNil "tf47_core_ticketsystem_tickets") then {
 };
 
 // show slot cost
-_ticketCost = player getVariable ["tf47_core_ticketsystem_cost", -1];
+_ticketCost = missionNamespace getVariable 
+                [format ["tf47_core_ticketsystem_cost_%1", 
+                (player call BIS_fnc_netId)],-1];
+//_ticketCost = player getVariable ["tf47_core_ticketsystem_cost", -1];
 if(_ticketCost != -1) then {
     ctrlSetText [1005, format["  %1", _ticketCost]];
 } else {
